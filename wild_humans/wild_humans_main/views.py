@@ -6,4 +6,4 @@ def index(request):
 
     context_dict = {}
 
-    return render_to_response('', context_dict, context)
+    return render_to_response('wild_humans_main/index.html', context_dict, context)
