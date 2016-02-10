@@ -1,0 +1,36 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    background-image: url("/static/img/background.png");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    height: 100%;
+    width: 100%;
+
+
+}
+
+hr {
+	color: white;
+	width: 100%;
+	height: 3px;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.content {
+    font-family: 'Raleway', sans-serif;
+	color: white;
+}
+
+.center {
+    text-align: center;
+}
+
+.pad {
+    height: 200px;
+}
