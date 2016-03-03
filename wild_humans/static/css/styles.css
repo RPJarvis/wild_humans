@@ -47,10 +47,10 @@ a:hover, a:visited, a:link, a:active
 }
 
 .pad {
-    height: 200px;
+    height: 160px;
 }
 
-//TODO: take this out and leave it in social css file, collect static
+/*TODO: take this out and leave it in social css file, collect static*/
 @font-face {
     font-family: 'Mono Social Icons Font';
     src: url('MonoSocialIconsFont-1.10.eot');
@@ -97,5 +97,9 @@ li {
     text-align: center;
     font-size: 30px;
     color: white;
+}
+
+.left-align {
+    text-align: left;
 }
 

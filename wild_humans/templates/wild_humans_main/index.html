@@ -8,12 +8,22 @@
             <hr>
             <h1 class="center">wild humans music</h1>
             <h3 class="center">is coming soon</h3>
-
             <hr>
         </div>
         <div class="col-md-2"></div>
     </div>
-    {% include 'social_media_links/social.html' %}
-    {% block social %}{% endblock %}
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="left-align">
+                <h3>{{ latest_blog.title }}</h3><br>
+                {{ latest_blog.body }}
+                {% include 'social_media_links/social.html' %}
+                {% block social %}{% endblock %}
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
 </div>
 {% endblock %}
