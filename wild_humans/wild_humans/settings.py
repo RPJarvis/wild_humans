@@ -118,6 +118,9 @@ STATICFILES_DIRS = (
     STATIC_PATH,
 )
 
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(PROJECT_PATH, 'media')
 
 TEMPLATES = [
     {

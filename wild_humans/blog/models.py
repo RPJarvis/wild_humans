@@ -6,7 +6,9 @@ class Blog(models.Model):
     title = models.CharField(max_length=140)
     slug = models.SlugField(unique=True, max_length=140)
     body = models.TextField()
+    blog_image = models.ImageField(verbose_name="Blog Image", blank=True)
     publish_date = models.DateTimeField(auto_now_add=True)
+
 
     class Meta:
         ordering = ['-publish_date']

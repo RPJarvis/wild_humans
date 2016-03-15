@@ -12,12 +12,24 @@
         </div>
         <div class="col-md-2"></div>
     </div>
-    <div class="row">
+    <div class="row blog-row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-            <div class="left-align">
-                <h3>{{ latest_blog.title }}</h3><br>
-                {{ latest_blog.body }}
+            <div class="left-align latest-blog">
+                <div class="title-bar">
+                    <h4>{{ latest_blog.title }}</h4>
+
+                </div>
+                <br>
+                <div>
+                    {% if latest_blog.blog_image %}
+                        <img style="float: left;" src="{{ latest_blog.blog_image.url }}" class="blog-image"/>
+                    {% endif %}
+                    {{ latest_blog.body }}
+
+                </div>
+            </div>
+            <div>
                 {% include 'social_media_links/social.html' %}
                 {% block social %}{% endblock %}
             </div>
