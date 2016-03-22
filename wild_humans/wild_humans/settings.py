@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'social_media_links',
     'blog',
+    'event_calendar',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -94,7 +95,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'MST'
 
 USE_I18N = True
 
@@ -125,7 +126,8 @@ MEDIA_ROOT = os.path.join(PROJECT_PATH, 'media')
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates'), os.path.join(BASE_DIR, 'blog', 'templates', 'blog')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'), os.path.join(BASE_DIR, 'blog', 'templates', 'blog'),
+                 os.path.join(BASE_DIR, 'event_calendar', 'templates', 'event_calendar')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

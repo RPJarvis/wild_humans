@@ -2,18 +2,20 @@
 {% block content %}
 <div class="container-fluid content">
     <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
             <h1 class="center">wild humans </h1>
 
             <hr>
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-1"></div>
     </div>
-    <div class="row blog-row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
+    <div class="row content-row">
+        <div class="col-md-1"></div>
+        <div class="col-md-7">
             <div class="left-align latest-blog">
+                <h3>News</h3>
+                <br>
                 <div class="title-bar">
                     <h4>{{ latest_blog.title }}</h4>
 
@@ -28,15 +30,23 @@
                 </div>
             </div>
             <br>
-            <hr>
-            <div>
-                {% include 'social_media_links/social.html' %}
-                {% block social %}{% endblock %}
-            </div>
+
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-3 left-align">
+            {% include 'event_calendar/calendar_column.html' %}
+            {% block calendar_column %}
+            {% endblock %}
+        </div>
+        <div class="col-md-1"></div>
 
     </div>
-
+    <div class="col-md-1"></div>
+    <div class="col-md-10"><hr>
+        <div>
+            {% include 'social_media_links/social.html' %}
+            {% block social %}{% endblock %}
+        </div>
+    </div>
+    <div class="col-md-1"></div>
 </div>
 {% endblock %}
