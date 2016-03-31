@@ -182,3 +182,8 @@ li {
     padding-left: 10%;
     padding-right: 10%;
 }
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none !important;
+}
