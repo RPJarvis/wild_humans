@@ -6,7 +6,9 @@ from .models import Blog
 def index(request):
     posts = Blog.objects.all()
     context_dict = {'posts': posts}
-
+    print(posts)
+    print(posts[0])
+    print(posts[0].title)
     return render(request, 'blog.html', context_dict)
 
 def post(request, slug):

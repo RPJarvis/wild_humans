@@ -1,21 +1,28 @@
-{% extends 'base.html' %}
-
-{% block title %}Wild Humans Blog{% endblock %}
-
+{% extends 'wild_humans_main/base.html' %}
 {% block content %}
-    {% for post in posts %}
-        <div class="post">
-            <h2>
-                <a href="{{post.get_absolute_url}}">
-                    {{post.title}}
-                </a>
-            </h2>
-            <p>{{post.discription}}</p>
-            <p>
-                Posted on
-                <time datetime="{{post.created|date:"c"}}">post.created|date
-                </time>
-            </p>
+<div class="container-fluid content">
+    <div class="row content-row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <div>
+                {% if posts %}
+                {% for post in posts %}
+                    <div class="blog-post">
+                        <h1>{{post.title}}</h1>
+                        <p>
+                            Posted on
+                            {{ post.publish_date|date }}
+                        </p>
+
+                        <p>
+                            {{ post.body | linebreaks }}
+                        </p>
+                    </div>
+                {% endfor %}
+                {% endif %}
+            </div>
         </div>
-    {% endfor %}
+        <div class="col-md-1"></div>
+    </div>
+</div>
 {% endblock %}

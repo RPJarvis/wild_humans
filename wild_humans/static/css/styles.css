@@ -175,3 +175,10 @@ li {
     float:none !important;
 }
 }
+
+.blog-post {
+    margin-top: 15px;
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 10%;
+}
