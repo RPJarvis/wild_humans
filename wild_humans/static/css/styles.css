@@ -7,7 +7,7 @@ html, body {
 
 body {
     background-image: url("/static/img/background.png");
-    background-color: black;
+    background-color: black !important;
     background-repeat: no-repeat;
     background-position: right bottom;
 
@@ -40,7 +40,7 @@ ul {
     margin: 0 0 0 0;
 }
 
-.content {
+.content, .title {
     font-family: 'Raleway', sans-serif;
 	color: white;
 	text-align: center;
@@ -48,10 +48,9 @@ ul {
 }
 
 .latest-blog {
-    padding-left: 20%;
-    padding-right: 20%;
 
-
+    padding-left: 10%;
+    padding-right: 10%;
 
 }
 
@@ -116,7 +115,7 @@ li {
 
 .social-links {
     text-align: center;
-    font-size: 30px;
+    font-size: 70px;
     color: white;
 }
 
@@ -137,7 +136,7 @@ li {
 }
 
 .title-bar {
-    clear: bloth;
+    clear: both;
     height: 20px;
 }
 
@@ -146,4 +145,22 @@ li {
     max-width: 300px;
     width: auto;
 
+}
+
+.banner {
+    font-size: 72px;
+}
+
+#main_nav {
+    background-color: black;
+    border: none;
+}
+
+#navbar ul li a:hover {
+    color: white;
+}
+
+.title {
+    margin-top: 20px;
+    color: white;
 }
