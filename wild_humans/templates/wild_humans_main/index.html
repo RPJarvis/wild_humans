@@ -6,19 +6,7 @@
         <div class="col-md-1"></div>
         <div class="col-md-10">
             <div class="left-align latest-blog">
-                <br>
-                <div class="title-bar">
-                    <h4>{{ latest_blog.title }}</h4>
-
-                </div>
-                <br>
-                <div>
-                    {% if latest_blog.blog_image %}
-                        <img style="float: left;" src="{{ latest_blog.blog_image.url }}" class="blog-image"/>
-                    {% endif %}
-                    {{ latest_blog.body | linebreaks }}
-
-                </div>
+                <img class="front-poster center-block img-responsive" src="/static/img/april_28_16.jpg">
             </div>
             <br>
 
