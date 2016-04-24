@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'social_media_links',
     'blog',
     'event_calendar',
+
 ]
 
 MIDDLEWARE_CLASSES = [
