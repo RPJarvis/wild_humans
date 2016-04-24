@@ -14,3 +14,9 @@ def index(request):
     context_dict = {'latest_blog': latest_blog, 'events': events}
 
     return render_to_response('wild_humans_main/index.html', context_dict, context)
+
+
+def listen(request):
+    context = RequestContext(request)
+
+    return render_to_response('wild_humans_main/listen.html', {}, context)
