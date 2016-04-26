@@ -144,4 +144,8 @@ TEMPLATES = [
 ]
 
 
+DEFAULT_FROM_EMAIL = 'contact@wildhumans.com'
 
+ADMINS = (('Webmaster','rjarvis.music@gmail.com'),('Julian','contact@wildhumans.com'))
+
+MANAGERS = ADMINS

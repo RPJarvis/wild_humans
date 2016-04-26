@@ -4,12 +4,15 @@
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-10 contact-form">
-            {% for field in form %}
-                {{ field.errors }} <br>
-                {{ field.label_tag }} <br>
-                {{ field }} <br>
-            {% endfor %}
-        <input type="submit" value="Submit" />
+            <form method="post">
+                {% csrf_token %}
+                {% for field in form %}
+                    {{ field.errors }} <br>
+                    {{ field.label_tag }} <br>
+                    {{ field }} <br>
+                {% endfor %}
+                <input type="submit" value="Submit" />
+            </form>
         </div>
         <div class="col-md-1"></div>
     </div>
