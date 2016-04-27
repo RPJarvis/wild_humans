@@ -144,6 +144,8 @@ TEMPLATES = [
 ]
 
 
+EMAIL_HOST = 'localhost'
+
 DEFAULT_FROM_EMAIL = 'contact@wildhumans.com'
 
 ADMINS = (('Webmaster','rjarvis.music@gmail.com'),('Julian','contact@wildhumans.com'))
