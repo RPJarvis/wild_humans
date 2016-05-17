@@ -131,7 +131,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'templates'), os.path.join(BASE_DIR, 'blog', 'templates', 'blog'),
-                 os.path.join(BASE_DIR, 'event_calendar', 'templates', 'event_calendar')],
+                 os.path.join(BASE_DIR, 'event_calendar', 'templates', 'event_calendar'),
+                 os.path.join(BASE_DIR, 'videos', 'templates', 'videos')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
