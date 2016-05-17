@@ -62,10 +62,6 @@ ul {
 .center {
     text-align: center;
 }
-a:hover, a:visited, a:link, a:active
-{
-    text-decoration: none;
-}
 
 .pad {
     height: 100px;
@@ -84,31 +80,7 @@ a:hover, a:visited, a:link, a:active
     font-style: normal;
 }
 
-.symbol, a.symbol:before {
-    font-family: 'Mono Social Icons Font';
-    -webkit-text-rendering: optimizeLegibility;
-    -moz-text-rendering: optimizeLegibility;
-    -ms-text-rendering: optimizeLegibility;
-    -o-text-rendering: optimizeLegibility;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
-    -ms-font-smoothing: antialiased;
-    -o-font-smoothing: antialiased;
-    font-smoothing: antialiased;
-    color: white;
 
-}
-
-.symbol:hover, a.symbol {
-    color: gray;
-}
-
-a.symbol:before {
-    content: attr(title);
-    margin-right: 0.3em;
-    font-size: 130%;
-}
 
 li {
     display: inline;
@@ -184,10 +156,7 @@ li {
     padding-right: 10%;
 }
 
-a:hover, a:visited, a:link, a:active
-{
-    text-decoration: none !important;
-}
+
 
 .front-poster {
     height: 600px;
@@ -205,4 +174,43 @@ a:hover, a:visited, a:link, a:active
 
 body { 
    overflow-x: hidden;
+}
+
+a {
+    transition: color .2s ease-in;
+}
+
+a:hover {
+    color: white;
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none !important;
+}
+
+.symbol, a.symbol:before {
+    font-family: 'Mono Social Icons Font';
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    -ms-text-rendering: optimizeLegibility;
+    -o-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    color: gray;
+    transition: color .2s ease-in;
+}
+
+.symbol:hover, a.symbol {
+    color: white;
+}
+
+a.symbol:before {
+    content: attr(title);
+    margin-right: 0.3em;
+    font-size: 130%;
 }
