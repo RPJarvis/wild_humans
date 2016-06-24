@@ -14,7 +14,7 @@
                                 {{ event.date }} <br>
                                 {{ event.title }} <br>
                                 {{ event.venue }} <br>
-                                {{ event.description }}
+                                {{ event.description|safe}}
                             </li>
                         {% endfor %}
                     {% else %}
