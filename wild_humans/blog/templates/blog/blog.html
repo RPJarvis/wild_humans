@@ -15,8 +15,8 @@
                         </p>
 
                         <p>
-                            {{ post.body | linebreaks }}
-                        </p>
+                            {{ post.body|safe|linebreaks }}
+			</p>
                     </div>
                 {% endfor %}
                 {% endif %}
