@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'blog',
     'event_calendar',
     'videos',
-
+    'cover_page',
 ]
 
 MIDDLEWARE_CLASSES = [
