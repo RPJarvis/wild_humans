@@ -1,10 +1,9 @@
 <div id="wh-carousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="wh-carousel" data-slide-to="0" class="active"></li>
-        <li data-target="wh-carousel" data-slide-to="1"></li>
-        <li data-target="wh-carousel" data-slide-to="2"></li>
-        <li data-target="wh-carousel" data-slide-to="3"></li>
-        <li data-target="wh-carousel" data-slide-to="4"></li>
+        {% for counter in num_images %}
+            <li data-target="wh-carousel" data-slide-to=counter></li>
+        {% endfor %}
     </ol>
     <!--TODO define active and one passive, then replicate passive with for loop for number of imagesbeing passed in -1 -->
     <div class="carousel-inner">
@@ -14,30 +13,14 @@
                 <h3>carousel caption</h3>
             </div>
         </div>
+        {% for image in num_images %}
         <div class="item">
             <img src="" alt="...">
             <div class="carousel-caption">
                 <h3>carousel caption</h3>
             </div>
         </div>
-        <div class="item">
-            <img src="" alt="...">
-            <div class="carousel-caption">
-                <h3>carousel caption</h3>
-            </div>
-        </div>
-        <div class="item">
-            <img src="" alt="...">
-            <div class="carousel-caption">
-                <h3>carousel caption</h3>
-            </div>
-        </div>
-        <div class="item">
-            <img src="" alt="...">
-            <div class="carousel-caption">
-                <h3>carousel caption</h3>
-            </div>
-        </div>
+        {% endfor %}
     </div>
     <!-- buttons -->
     <a class="left carousel-control" href="#wh-carousel" role="button" data-slide="prev">
