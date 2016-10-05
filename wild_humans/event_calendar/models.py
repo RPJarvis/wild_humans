@@ -6,10 +6,11 @@ class Event(models.Model):
     date = models.DateTimeField()
     venue = models.CharField(max_length=140)
     description = models.CharField(max_length=240)
+    passed = models.BooleanField()
 
     #method to check if event has passed
     class Meta():
-        ordering = ['-date']
+        ordering = ['date']
 
     def __unicode__(self):
         return u'%s' % self.title

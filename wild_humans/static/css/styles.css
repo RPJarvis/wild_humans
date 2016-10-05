@@ -214,3 +214,8 @@ a.symbol:before {
     margin-right: 0.3em;
     font-size: 130%;
 }
+
+.show-listing {
+    width: 80%;
+
+}

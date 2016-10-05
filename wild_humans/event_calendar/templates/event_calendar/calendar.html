@@ -15,10 +15,37 @@
                                 {{ event.title }} <br>
                                 {{ event.venue }} <br>
                                 {{ event.description|safe}}
+                                <!--<hr class="show-listing">-->
+                                <br><br>
                             </li>
                         {% endfor %}
                     {% else %}
                         <li>No upcoming events</li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="row content-row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <div class="calendar-column">
+                <h3>Past Shows</h3>
+                <br>
+                <ul>
+                    {% if passed_events %}
+                        {% for event in passed_events %}
+                            <li>
+                                {{ event.date }} <br>
+                                {{ event.title }} <br>
+                                {{ event.venue }} <br>
+                                {{ event.description|safe}}
+                                <br><br><!--<hr class="show-listing">-->
+                            </li>
+                        {% endfor %}
+                    {% else %}
+                        <li>No passed events</li>
                     {% endif %}
                 </ul>
             </div>
