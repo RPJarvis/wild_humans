@@ -1,31 +1,29 @@
-
+{% extends wild_humans_main/base.html %}
 {% block content %}
-<div id="calendar" class="container-fluid content section-container">
-    <div class="row content-row">
+<div class="row content-row">
         <div class="col-md-1"></div>
         <div class="col-md-10">
             <div class="calendar-column">
-                <h3>Upcoming</h3>
+                <h3>Past Shows</h3>
                 <br>
                 <ul>
-                    {% if events %}
-                        {% for event in events %}
+                    {% if passed_events %}
+                        {% for event in passed_events %}
                             <li>
                                 {{ event.date }} <br>
                                 {{ event.title }} <br>
                                 {{ event.venue }} <br>
                                 {{ event.description|safe}}
-                                <!--<hr class="show-listing">-->
                                 <br><br>
                             </li>
                         {% endfor %}
                     {% else %}
-                        <li>No upcoming events</li>
+                        <li>No past events</li>
                     {% endif %}
                 </ul>
             </div>
         </div>
         <div class="col-md-1"></div>
     </div>
-</div>
+
 {% endblock %}
